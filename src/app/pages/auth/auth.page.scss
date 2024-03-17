@@ -1,0 +1,8 @@
+.no-underline{
+    text-decoration: none;
+    color: primary;
+    cursor: pointer;
+    &:hover{
+        text-decoration: none;
+    }
+}

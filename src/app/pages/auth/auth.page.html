@@ -1,4 +1,4 @@
-<app-header title="Login"></app-header>
+<app-header title="Ingreso"></app-header>
 
 <ion-content [fullscreen]="true">
   <div class="d-flex-center">
@@ -50,6 +50,8 @@
       <ion-button expand="block" mode="ios" class="submit" type="submit" [disabled]="form.invalid">
         Ingresar
       </ion-button>
+
+      <p>¿No tienes cuenta? <a routerLink="sign-up" class="no-underline">Registrate</a></p>
 
     </form>
   </div>
