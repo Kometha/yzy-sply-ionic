@@ -1,0 +1,56 @@
+<app-header title="Login"></app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="d-flex-center">
+    <form [formGroup]="form" class="auth-form" (ngSubmit)="onSubmit()" (keypress.enter)="onSubmit()">
+      <app-logo></app-logo>
+      <app-custom-input
+        icon="mail-outline"
+        [control]="form.controls.email"
+        placeholder="usuario@ejemplo.com"
+        type="email"
+        label="Correo"
+      ></app-custom-input>
+
+      @if (form.controls.email.errors && form.controls.email.touched) {
+        @if (form.controls.email.errors['required']) {
+          <div class="validators">
+            Es necesario ingresar un correo
+          </div>
+        }
+        @if (form.controls.email.errors['email']) {
+          <div class="validators">
+            Ingrese un correo valido
+          </div>
+        }
+      }
+
+
+      <app-custom-input
+        icon="lock-closed-outline"
+        [control]="form.controls.password"
+        placeholder="••••••••••••••"
+        type="password"
+        label="Contraseña"
+      ></app-custom-input>
+
+      @if (form.controls.password.errors && form.controls.password.touched) {
+        @if (form.controls.password.errors['required']) {
+          <div class="validators">
+            Es necesario ingresar una contraseña
+          </div>
+        }
+        @if (form.controls.password.errors['minlength']) {
+          <div class="validators">
+            La contraseña debe tener al menos 6 caracteres
+          </div>
+        }
+      }
+
+      <ion-button expand="block" mode="ios" class="submit" type="submit" [disabled]="form.invalid">
+        Ingresar
+      </ion-button>
+
+    </form>
+  </div>
+</ion-content>

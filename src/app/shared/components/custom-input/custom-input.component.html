@@ -1,0 +1,13 @@
+<ion-item class="custom-input" lines="none">
+  @if (icon) {
+  <ion-icon slot="start" [name]="icon" color="primary"></ion-icon>
+  }
+
+  <ion-input
+    [type]="type"
+    [placeholder]="placeholder"
+    [autocomplete]="autocomplete"
+    [formControl]="control"
+  ></ion-input>
+
+</ion-item>
