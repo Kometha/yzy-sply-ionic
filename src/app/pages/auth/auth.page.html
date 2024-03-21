@@ -1,5 +1,6 @@
 <app-header title="Ingreso"></app-header>
 
+
 <ion-content [fullscreen]="true">
   <div class="d-flex-center">
     <form [formGroup]="form" class="auth-form" (ngSubmit)="onSubmit()" (keypress.enter)="onSubmit()">
@@ -51,7 +52,7 @@
         Ingresar
       </ion-button>
 
-      <p>¿No tienes cuenta? <a routerLink="sign-up" class="no-underline">Registrate</a></p>
+      <p>¿No tienes cuenta? <a routerLink="sign-up" class="no-underline text-sky-400">Registrate</a></p>
 
     </form>
   </div>
